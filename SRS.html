@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>System Requirement Specification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  ul.nav-pills {
+      position:fixed;
+  }
+  div.col-8 div {
+      height: 200px;
+  }
+  
+html{
+  scroll-behavior: smooth;
+}
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+}
+ 
+</style>
+</head>
+<body style="background-color:#566573; color:white;" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+ 
+  <img style="width:15%"></img>
+  <header class="page header text-white"><h1 style="padding-left:10px;">System Requirement Specification </h1></header>
+
+  <!-- Links -->
+
+
+</ul>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-2 col-4 bg-dark" id="myScrollspy" >
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Introduction</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#sec1.1">Purpose</a>
+            <a class="dropdown-item" href="#sec1.2">Intended Audience</a>
+            <a class="dropdown-item" href="#sec1.3">Intended Use</a>
+            <a class="dropdown-item" href="#sec1.4">Product Scope</a>
+            <a class="dropdown-item" href="#sec1.5">Risk Definitions</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Overall Description</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#sec2.1">User Classes and<br> Characteristics</a>
+            <a class="dropdown-item" href="#sec2.2">User Needs</a>
+            <a class="dropdown-item" href="#sec2.3">Operating Environment</a>
+            <a class="dropdown-item" href="#sec2.4">Constraints</a>
+            <a class="dropdown-item" href="#sec2.5">Assumptions</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Functional<br>Requirements</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#sec3.1">Sign in</a>
+            <a class="dropdown-item" href="#sec3.2">Log in</a>
+            <a class="dropdown-item" href="#sec3.3">Search Book</a>
+            <a class="dropdown-item" href="#sec3.4">Add Book</a>
+	    <a class="dropdown-item" href="#sec3.5">Borrow Book</a>
+	    <a class="dropdown-item" href="#sec3.6">Return Book</a>
+	    <a class="dropdown-item" href="#sec3.7">Book List</a>
+	    <a class="dropdown-item" href="#sec3.8">Print Book List</a>
+	    <a class="dropdown-item" href="#sec3.9">Remove Book</a>
+	    <a class="dropdown-item" href="#sec3.10">Add Member</a>
+	    <a class="dropdown-item" href="#sec3.11">Remove Member</a>
+	    <a class="dropdown-item" href="#sec3.12">Search Member</a>
+	    <a class="dropdown-item" href="#sec3.13">Edit Member</a>
+	    <a class="dropdown-item" href="#sec3.14">Print Member List</a>
+	    <a class="dropdown-item" href="#sec3.15">Menu Bar</a>
+	    <a class="dropdown-item" href="#sec3.16">About</a>
+		 <a class="dropdown-item" href="#sec3.17">Log out</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Non-Functional<br> Requirements</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#sec4.1">Availability Requirement</a>
+            <a class="dropdown-item" href="#sec4.2">Efficiency Requirement</a>
+            <a class="dropdown-item" href="#sec4.3">Accuracy</a>
+            <a class="dropdown-item" href="#sec4.4">Performance Requiremen</a>
+           <a class="dropdown-item" href="#sec4.5">Reliability Requiremen</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+      <a class="nav-link " href="#section5">Other Requirements</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div style="padding-top:30px; padding-left:30px; padding-right:150px;" class="col-sm-10 col-8">
+
+        <h2 style="color:#5FD3BC;">1. Introduction</h2>
+		<p>With the increase in the number of readers, better management of libraries system is required. 
+		The Library management system focuses on improving the management of libraries in a city or town. 
+		“What If you can check whether a book is available in the library through your phone?” or 
+		“what if instead of having different library cards for different libraries you can just have one?”
+		or “you can reserve a book or issue a book from your phone sitting at your home!”. 
+		The Integrated Library Management system provides you the ease of issuing, renewing or reserving a book from a library within your town through your phone.
+		The Integrated Library Management system is developed on the android platform which basically focuses on issuing, renewing, and reserving a book.
+        <h4 id="sec1.1">1.1 Purpose</h4>
+        <p> The purpose of the project is to maintain the details of books and library members of different libraries. 
+		The main purpose of this project is to maintain an easy circulation system between clients and the libraries, to issue books using single library member id number, also to search and borrow any book from different available libraries and to maintain details about the user (fine, address, phone number).
+		Moreover, the user can check all these features from their home.
+        <h4 id="sec1.2">1.2 Intended Audience</h4>
+        <p> The intended audiences for this document are:<br>
+        <ul type="bullet">
+			<li>The team members of Innovative library Solutions. This document will be reviewed frequently by the above audiences to check if the different phases of the project are being completed by meeting the given requirements. If there are any changes in the requirements in the course of the project they must be included in this document by making the necessary changes.
+		</ul>
+        <h4 id="sec1.3">1.3 Intended Use</h4>
+        <p> The intended audience consists of <br>
+		<ul type="bullet">
+		<li>Software Project Managers
+		<li>Software Engineers
+		<li>Software Developers
+		<li>Library Organizer
+		</ul>
+        <h4 id="sec1.4">1.4 Product Scope</h4>
+        <p> Project Title: Library Management System Prepared By: Students of North South University, Dhaka, Bangladesh. Project Justification: This project is basically updating the manual library system into an internet based application so that the users can know the details of their account, availability of books, etc. Product Characteristics and Requirements :<br>
+		<ul type="i">
+		<li>Secured database
+		<li>User tracking
+		<li>Calculating fine
+		<li>Search feature
+		<li>Checking the availability of books
+		<li>Students will get an E-mail before the due date in order to avoid fines. Project Management Deliverables: Project plan, Research finding report, Work breakdown structure, The scope statement, Project charter, Training manuals, lessons learned report, etc. Product-related deliverables: Research reports, design documents, software code, hardware, test plan, project benefit measurement plan, etc.
+		</ul>
+		<p> <b>Project Success Criteria:</b> Our main goal is to complete this project within the allotted deadline and also within the budget allotted. It is necessary to develop a method for capturing the benefits while the library management system is being developed, tested, and after it is rolled out. If the project takes a little longer to complete or costs a little more than planned, the firm will still view it as a success if it has a good payback and helps promote the firm’s image as an excellent management organization
+		
+        <h4 id="sec1.5">1.5 Risk Definition</h4>
+         <p> There is no market risk because this is a university library management system. But there can be a risk of finding all kinds of books such as a university student needs different kinds of books, so, a lot of books should be stored in the database and for that database should be in huge size. A huge database can slow down processing. This point should be in mind while developing the system.
+
+        <br><br><br>
+
+        <!-- Descriptions edited -->
+
+        <h2 style="color:#5FD3BC;">2. Overall Description</h2>
+        <p><b>Product Perspective:</b><br>
+		The implementation of Library Management starts with entering and updating master records like book details, library information. Any further transaction like book issue, book return will automatically update the current books. The proposed Library Management System will take care of the current book detail at any point in time. The book issue, book return will update the current book details automatically so that the user will get the updated current book details.
+		Product function: The main purpose of this project is to reduce the manual work. This software is capable of managing Book Issues, Returns, and Calculating/Managing Fine. Generating various Reports for Record-Keeping according to end-user requirements.
+		<br><br>This System will provide search functionality to facilitate the search for resources. This search will be based on various categories viz. book name or the ISBN. Also, an Advanced Search feature is provided in order to search for various categories simultaneously. 
+        <h4 id="sec2.1">2.1 User Classes and Characteristics</h4>
+        <p> <ul type="bullet">
+			<li> User module: In the user module, the user will check the availability of the books.
+			<li> Book return
+			<li> Administration module: The following are the submodule in the administration module.
+			<li> Register user
+			<li> Entry book details
+			<li> Book issue
+		</ul>
+			There are various kinds of users for the product. Usually, web products are visited by various users for different reasons.
+		<ul type="bullet"> <li>	students who will be using the above features by accessing the Library online.
+			<li> A librarian who will be acting as the controller and he will have all the privileges of an administrator.
+		</ul>
+        <h4 id="sec2.2">2.2 User Needs</h4>
+        <p> The software provides a good graphical interface for the user any administrator can operate on the system, performing the required task such as create, update, viewing the details of the book.
+		<ul type="bullet"> 
+			<li> Allows users to view quick reports like Book Issues/Returned etc in between a particular time.
+			<li> Stock verification and search facility based on different criteria.
+		</ul>
+		<p> The user of this product needs not be a computer expert. Even an active user can also operate the system. The user interfaces are to be made so simple that anybody can be comfortable in working with the system in just a few minutes. The basic things which are required in a user are: <br>
+		<ul type="bullet"> 
+			<li> Users should know what the computer is.
+			<li> User should understand English
+			<li> User must know which key (button or keyboard) does what
+			<li> User must have experience in library management. 
+		</ul>
+		
+		<p><b>PROBLEM STATEMENT:</b> <br>
+	The problem occurred before having computerized system includes:
+
+	<br><br><b>File lost</b> <br>
+	When a computerized system is not implemented file is always lost because of the human environment. Some times due to some human error there may be a loss of records.
+
+	<br><br><b>File damaged</b> <br>
+	When a computerized system is not their file is always lost due to some accident like spilling of water by some member on file accidentally. Besides some natural disasters like floods or fires may also damage the files.
+
+	<br><br><b>Difficult to search record</b> <br>
+	When there is no computerized system there is always a difficulty in searching of records if the records are large in number.
+
+	<br><br><b>Space consuming</b> <br>
+	After the number of records becomes large the space for physical storage of file and records also increases if no computerized system is implemented.
+
+	<br><br><b>Cost consuming</b> <br>
+	As there is no computerized system to add each recording paper will be needed which will increase the cost for the management of the library.
+        <h4 id="sec2.3">2.3 Operating Environment</h4>
+        <p> The product will be operating in the windows environment. Also, it will be compatible with the IE 6.0. Most of the features will be compatible with the Mozilla firefox & Opera 7.0 or higher version. The only requirement to use this online product would be an internet connection.<br>
+
+		<br>Books and student maintenance modules are also included in this system which would keep track of the students using the library and also a detailed description of the books a library contains. With this computerized system, there will be no loss of book record or member record which generally happens when a non-computerized system is used.
+
+        <h4 id="sec2.4">2.4 Constraints</h4>
+        <p> The operating environment is given below:
+        <ul type="bullet">	
+		<li>The system database used should be an open-source technology.
+		<li>The system should be implemented in Java Technology.
+		<li>The downtime of the system should be less than 10 min.
+		<li>RAM usages should not exceed 1024MB.
+		<li>This system software size should not exceed 1GB.
+		</ul>
+		
+        <h4 id="sec2.5">2.5 Assumptions</h4>
+        <p> It is assumed that the optimum internet connectivity speed will be more than 512 Kbps. If the bandwidth is less than this then the transaction completion will take more time to processed and be complete. <br>
+
+		<br>The product is designed for both the Users and Library Admin. It will be a helpful product in a very effective way as it will reduce the tiresome workload from both Users and Library Admin. 
+
+ <h2 style="color:#5FD3BC;">3. Functional Requirements</h2>
+        <h4 id="sec3.1">3.1 Sign In</h4>
+        <p><b>As a</b> User <br><b> I want to</b> sign in into a Library management System <br> <b> So that, </b> I can create an account in the Library Management System. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li>Users need to give username and password </li>
+	<li>Users also need to confirm the password </li>
+	<li>If the password is wrong, a massage will appear with “Miss Match Password”.
+	</ol>
+
+        <h4 id="sec3.2">3.2 Login</h4>
+        <p><b>As a</b> User <br><b> I want to</b> log into a Library Management System <br> <b> So that, </b>I can Access the system to borrow/add/return books from the system. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Users need to input username and password
+	<li> If the password is wrong, a massage will appear with “Miss Match Password”.
+	</ol>
+        <h4 id="sec3.3">3.3 Search Book</h4>
+        <p><b>As a</b> User <br><b> I want to</b> search book <br> <b> So that, </b> I can find a book easily. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can search in multiple ways.
+	<li> An option named “Search by” will appear with multiple option containing book id, subject, tittle, author, ISBN.
+	<li> User can choose any option and will get a input keyword option to search the way he/she choose.
+	<li> The book list will appear with the book information and also availability.
+	</ol>
+        <h4 id="sec3.4">3.4 Add Book</h4>
+        <p><b>As a</b> User <br><b> I want to</b> add book <br> <b> So that, </b> I can store the library with more books that can be useful for others.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can edit book information with existing book id.
+	<li> User can add book with the book information.
+	<li> The book information will contain book subject, tittle, author name, copyright of the book, edition number, total pages, ISBN code number, number of copies, the name of library.
+	<li> 	The book id will automatically generated by the system. 
+	</ol>
+	
+	<h4 id="sec3.5">3.5 Borrow Book</h4>
+        <p><b>As a</b> User <br><b> I want to</b> borrow book <br> <b> So that, </b> , I can take it with me to home other than study in the library. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can borrow book with this function.
+	<li> User can borrow by book id and member id.
+	<li> User can see the current date and choose the return date from this function.
+	</ol>
+	
+	<h4 id="sec3.6">3.6 Return Book</h4>
+        <p><b>As a</b> User <br><b> I want to</b> return my borrowed book <br> <b> So that, </b> others can borrow it after returning.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can return book with this function.
+	<li> User can return by book id and member id.
+	</ol>
+	
+	<h4 id="sec3.7">3.7 Book List</h4>
+        <p><b>As a</b> User <br><b> I want to</b> check the book list to check the availability  <br> <b> So that, </b> I can know the books I can borrow and also those I can’t.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Book list function will show all the books with information in a list.
+	<li> The book information will contain book subject, tittle, author name, copyright of the book, edition number, total pages, ISBN code number, number of copies, the name of library.
+	</ol>
+	
+	<h4 id="sec3.8">3.8 Print Book List</h4>
+        <p><b>As a</b> User <br><b> I want to</b> print book list <br> <b> So that, </b> I can see the books I got and can keep evidence/records in pdf copy. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Print Book list will give an option to print the list.
+	<li> Print book list can save the list in pdf file.
+	<li> This function also choose the page style , page limit etc.
+	</ol>
+	
+	<h4 id="sec3.9">3.9 Remove Book</h4>
+        <p><b>As a</b> User <br><b> I want to</b> remove book <br> <b> So that, </b> I can short the list of books by removing which book I don’t need.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Remove book option will be very simple. User can remove book just by entering the book id.
+	</ol>
+	
+	<h4 id="sec3.10">3.10 Add Member</h4>
+        <p><b>As a</b> User <br><b> I want to</b> add member <br> <b> So that, </b>other people can access the library management system. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can add member with the member information.
+	<li> The member information will contain member registration number, password, re-write password, name, email, major, valid date of a member.
+	<li> The member id will automatically generated by the system. 
+	</ol>
+	
+	<h4 id="sec3.11">3.11 Remove Member</h4>
+        <p><b>As a</b> User <br><b> I want to</b> remove member <br> <b> So that, </b>, I can remove people to shouldn’t access the system. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Remove member option will be as simple as remove book. User can remove member just by entering the member id.
+	</ol>
+	
+	<h4 id="sec3.12">3.12 Search Member</h4>
+        <p><b>As a</b> User <br><b> I want to</b> search member <br> <b> So that, </b> I can find out any user easily in the system. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can search in multiple ways.
+	<li> An option named “Search by” will appear with multiple option containing member id, name, email, Course major.
+	<li> User can choose any option and will get a input keyword option to search the way he/she choose.
+	</ol>
+	
+	<h4 id="sec3.13">3.13 Edit Member</h4>
+        <p><b>As a</b> User <br><b> I want to</b> edit member profile <br> <b> So that, </b> I can change name or password or subject.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> User can edit member information with existing member id.
+	<li> User can update the information.
+	<li> The member information will contain member registration number, password, re-write password, name, email, major, valid date of a member.
+	<li> The member id will automatically generated by the system. 
+	</ol>
+	
+	<h4 id="sec3.14">3.14 Print Member List</h4>
+        <p><b>As a</b> User <br><b> I want to</b>print member list. <br> <b> So that, </b> I can see the member list and can get evidence/record in hard copy.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Print member list will give an option to print the list.
+	<li> Print member list can save the list in pdf file.
+	<li> This function also chooses the page style, page limit etc.
+	</ol>
+	
+	<h4 id="sec3.15">3.15 Menu Bar</h4>
+        <p><b>As a</b> User <br><b> I want </b> a menu bar  <br> <b> So that, </b> I can see all my functions of my system in one place together and can access easily from one place.<br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Manu Bar option will help to maintain the system easily.
+	<li> Manu bar has all the function in one place with extra functions such as calculator and notepad.
+	<li> Calculator and notepad added because of importance of these tools for a student. They can calculate while reading and also can keep notes when needed. 
+	</ol>
+	
+	<h4 id="sec3.16">3.16 About</h4>
+        <p><b>As a</b> User <br><b> I want </b> an about option <br> <b> So that, </b> I can store information about this system and collaborators. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> This function will show some information about the system and the collaborators of this system.
+	</ol>
+	
+	<h4 id="sec3.17">3.17 Log out</h4>
+        <p><b>As a</b> User <br><b> I want to</b> log out <br> <b> So that, </b>I can secure my account. <br>
+	<b> Confirmation/Acceptance:</b> <br>
+	<ol type="i">
+	<li> Users can logout just pressing the log out button.
+	</ol>
+
+        <h2 style="color:#5FD3BC;">4. Non-Functional Requirements</h2>
+	<h4 id="sec4.1">4.1 Availability Requirement</h4>
+	<p> The system is available 100% for the user and is used 24 hrs a day and 365days a year.The system shall be operational 24 hours a day and 7 days a week.
+	
+	<h4 id="sec4.2">4.2 Efficiency Requirement</h4>
+	<p> Mean Time to Repair (MTTR) -Even if the system fails, the system will be recovered back upwithin an hour or less.
+	
+	<h4 id="sec4.3">4.3 Accuracy</h4>
+	<p> The system should accurately providereal time information taking into consider ationvarious concurrency issues.The system shall provide 100% access reliability.
+
+	<h4 id="sec4.4">4.4 Performance Requirement</h4>
+	<p>The information is refreshed dependingupon whether some updates have occurred or not in the application. Thesystem shall respond to the member in not less than two seconds from the time of the request submittal. The system shall be allowed to take more time when doing large processing jobs.Responses to view information shall take no longer than 5seconds to appear on the screen.
+	
+	
+	<h4 id="sec4.5">4.5 Reliability Requirement</h4>
+	<p>The system has to be 100% reliable due to the importance of data and the damages that can becaused by incorrect or incomplete data. The system will run 7 days a week, 24 hours a day.
+	
+<br> <br> <br>
+
+
+<!--<h4 id="section5">Appendix: Analysis Models</h4>
+<p> We plan to include class diagrams after the prototype is finished.-->
+
+<br><br><br>
+
+      
+      <div style="padding-top:20px;" class="row">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
+
+</body>
+</html>
